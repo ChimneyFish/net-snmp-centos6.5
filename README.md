@@ -26,6 +26,7 @@ Here is a list of tested repos that will return packages.  You can look at the s
 
  Here is the list of repos that I used to install net-snmp and net-snmp-utils
  This will take a long time so once you hit enter on the command at the bottom,walkaway and get some rest.
+ !!!!Very Important.... Make sure you update a version at a time and delete the completed repos once completed, otherwise you will break your system.
 
     yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.6/updates/x86_64/$basearch/
     yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.7/updates/x86_64/$basearch/

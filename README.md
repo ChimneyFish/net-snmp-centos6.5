@@ -58,7 +58,7 @@ Here is a list of tested repos that will return packages.  You can look at the s
     yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/7.0.1406/fasttrack/x86_64/$basearch/
     yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/7.1.1501/fasttrack/x86_64/$basearch/
     
-    yum update -y && yum upgrade --skip-broken -y
+    yum update -y && yum upgrade --skip-broken -y && yum distribution-syncronization
 
  # (Broken)
 Download original Tar archive  You need to modify file extentions and edit the Makefile, Makefile.rules, and the ./configure script to get it to halfway build correctly.

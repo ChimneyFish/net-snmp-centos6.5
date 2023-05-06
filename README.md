@@ -80,22 +80,22 @@ Note that if you want to specify option you can always view the output of ./conf
 
 Install 6.5 Repo
 
-    yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/os/x86_64/$basearch/
-    yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/fasttrack/x86_64/$basearch/
-    yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/centosplus/x86_64/$basearch/
-    yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/updates/x86_64/$basearch/
-    yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/contrib/x86_64/$basearch/
-    yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/extras/x86_64/$basearch/
-    yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/xen4/x86_64/$basearch/
-    yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/cr/x86_64/$basearch/
+      yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/os/x86_64/$basearch/
+      yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/fasttrack/x86_64/$basearch/
+      yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/centosplus/x86_64/$basearch/
+      yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/updates/x86_64/$basearch/
+      yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/contrib/x86_64/$basearch/
+      yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/extras/x86_64/$basearch/
+      yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/xen4/x86_64/$basearch/
+      yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/cr/x86_64/$basearch/
    
 Run the update and the upgrade 
 
-   yum update --skip-broken && yum upgrade --skip-broken
+     yum update --skip-broken && yum upgrade --skip-broken
    
 Install packages
 
-   yum install net-snmp-utils.x86_64 net-snmp.x86_64 --nogpgcheck --skip-broken
+     yum install net-snmp-utils.x86_64 net-snmp.x86_64 --nogpgcheck --skip-broken
    
 If successfull, you should return an output somthing like this.
 

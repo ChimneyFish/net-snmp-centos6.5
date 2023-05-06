@@ -99,49 +99,10 @@ Install packages
    
 If successfull, you should return an output somthing like this.
 
-   ================================================================================
- Package
-    Arch   Version          Repository                                     Size
-================================================================================
-Updating:
- net-snmp
-    x86_64 1:5.5-50.el6_6.1 linuxsoft.cern.ch_centos-vault_6.5_cr_x86_64_ 306 k
- net-snmp-utils
-    x86_64 1:5.5-50.el6_6.1 linuxsoft.cern.ch_centos-vault_6.5_cr_x86_64_ 174 k
-Updating for dependencies:
- net-snmp-libs
-    x86_64 1:5.5-50.el6_6.1 linuxsoft.cern.ch_centos-vault_6.5_cr_x86_64_ 1.5 M
+[Completed.txt](https://github.com/ChimneyFish/net-snmp-centos6.5/files/11412211/Completed.txt)
 
-Transaction Summary
-================================================================================
-Upgrade       3 Package(s)
 
-Total size: 2.0 M
-Is this ok [y/N]: y
-Downloading Packages:
-Running rpm_check_debug
-Running Transaction Test
-Transaction Test Succeeded
-Running Transaction
-  Updating   : 1:net-snmp-libs-5.5-50.el6_6.1.x86_64                        1/6 
-  Updating   : 1:net-snmp-utils-5.5-50.el6_6.1.x86_64                       2/6 
-  Updating   : 1:net-snmp-5.5-50.el6_6.1.x86_64                             3/6 
-  Cleanup    : 1:net-snmp-5.5-49.el6.x86_64                                 4/6 
-  Cleanup    : 1:net-snmp-utils-5.5-49.el6.x86_64                           5/6 
-  Cleanup    : 1:net-snmp-libs-5.5-49.el6.x86_64                            6/6 
-  Verifying  : 1:net-snmp-utils-5.5-50.el6_6.1.x86_64                       1/6 
-  Verifying  : 1:net-snmp-5.5-50.el6_6.1.x86_64                             2/6 
-  Verifying  : 1:net-snmp-libs-5.5-50.el6_6.1.x86_64                        3/6 
-  Verifying  : 1:net-snmp-libs-5.5-49.el6.x86_64                            4/6 
-  Verifying  : 1:net-snmp-5.5-49.el6.x86_64                                 5/6 
-  Verifying  : 1:net-snmp-utils-5.5-49.el6.x86_64                           6/6 
 
-Updated:
-  net-snmp.x86_64 1:5.5-50.el6_6.1    net-snmp-utils.x86_64 1:5.5-50.el6_6.1   
 
-Dependency Updated:
-  net-snmp-libs.x86_64 1:5.5-50.el6_6.1                                         
-
-Complete!
 
 # Hope this Helps!!!!

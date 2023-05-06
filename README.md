@@ -68,12 +68,80 @@ Download original Tar archive  You need to modify file extentions and edit the M
 
 This will download as a .tmp, just rename it and remove the .tmp extention, so that it is left as a .tar.tg archive.
 To build this you will need to run the folloing commands while terminaled into the net-snmp-5.4.4 folder. 
+
+
     ./configure
     make
     make install
 Note that if you want to specify option you can always view the output of ./configure --help.  otherwise you will configure with default options.
 
 
+# Installing net-snmp and net-snmp-utils on cent os 6.5 (working)
 
+Install 6.5 Repo
+
+    yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/os/x86_64/$basearch/
+    yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/fasttrack/x86_64/$basearch/
+    yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/centosplus/x86_64/$basearch/
+    yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/updates/x86_64/$basearch/
+    yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/contrib/x86_64/$basearch/
+    yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/extras/x86_64/$basearch/
+    yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/xen4/x86_64/$basearch/
+    yum-config-manager --add-repo=http://linuxsoft.cern.ch/centos-vault/6.5/cr/x86_64/$basearch/
    
-    
+Run the update and the upgrade 
+
+   yum update --skip-broken && yum upgrade --skip-broken
+   
+Install packages
+
+   yum install net-snmp-utils.x86_64 net-snmp.x86_64 --nogpgcheck --skip-broken
+   
+If successfull, you should return an output somthing like this.
+
+   ================================================================================
+ Package
+    Arch   Version          Repository                                     Size
+================================================================================
+Updating:
+ net-snmp
+    x86_64 1:5.5-50.el6_6.1 linuxsoft.cern.ch_centos-vault_6.5_cr_x86_64_ 306 k
+ net-snmp-utils
+    x86_64 1:5.5-50.el6_6.1 linuxsoft.cern.ch_centos-vault_6.5_cr_x86_64_ 174 k
+Updating for dependencies:
+ net-snmp-libs
+    x86_64 1:5.5-50.el6_6.1 linuxsoft.cern.ch_centos-vault_6.5_cr_x86_64_ 1.5 M
+
+Transaction Summary
+================================================================================
+Upgrade       3 Package(s)
+
+Total size: 2.0 M
+Is this ok [y/N]: y
+Downloading Packages:
+Running rpm_check_debug
+Running Transaction Test
+Transaction Test Succeeded
+Running Transaction
+  Updating   : 1:net-snmp-libs-5.5-50.el6_6.1.x86_64                        1/6 
+  Updating   : 1:net-snmp-utils-5.5-50.el6_6.1.x86_64                       2/6 
+  Updating   : 1:net-snmp-5.5-50.el6_6.1.x86_64                             3/6 
+  Cleanup    : 1:net-snmp-5.5-49.el6.x86_64                                 4/6 
+  Cleanup    : 1:net-snmp-utils-5.5-49.el6.x86_64                           5/6 
+  Cleanup    : 1:net-snmp-libs-5.5-49.el6.x86_64                            6/6 
+  Verifying  : 1:net-snmp-utils-5.5-50.el6_6.1.x86_64                       1/6 
+  Verifying  : 1:net-snmp-5.5-50.el6_6.1.x86_64                             2/6 
+  Verifying  : 1:net-snmp-libs-5.5-50.el6_6.1.x86_64                        3/6 
+  Verifying  : 1:net-snmp-libs-5.5-49.el6.x86_64                            4/6 
+  Verifying  : 1:net-snmp-5.5-49.el6.x86_64                                 5/6 
+  Verifying  : 1:net-snmp-utils-5.5-49.el6.x86_64                           6/6 
+
+Updated:
+  net-snmp.x86_64 1:5.5-50.el6_6.1    net-snmp-utils.x86_64 1:5.5-50.el6_6.1   
+
+Dependency Updated:
+  net-snmp-libs.x86_64 1:5.5-50.el6_6.1                                         
+
+Complete!
+
+# Hope this Helps!!!!
